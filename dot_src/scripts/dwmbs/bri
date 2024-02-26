@@ -1,0 +1,10 @@
+#!/bin/sh
+
+icon="🔆"
+
+bri_c=$(brightnessctl g)
+bri_m=$(brightnessctl m)
+
+bri=$(python3 -c "print(round(($bri_c/$bri_m)*100))")
+
+echo "$icon$bri%"
